@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-g",
+        "src/main.cpp",
+        "src/Bot.cpp",
+        "src/memory_reader.cpp",
+        "src/input_simulator.cpp",
+        "-o",
+        "build/TibiaBot.exe"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"]
+    }
+  ]
+}
