@@ -30,6 +30,18 @@ int main() {
     auto lastBuff2 = std::chrono::steady_clock::now();
 
     while (true) {
+        if (GetAsyncKeyState('P') & 0x8000) 
+		{
+            paused = !paused;
+            std::cout << (paused ? "[Pasue]" : "[UnPause]") << std::endl;
+            Sleep(500); // Unikaj spamowania
+        }
+
+        if (paused) {
+            Sleep(100);
+            continue;
+        }
+
         auto now = std::chrono::steady_clock::now();
 
         if (std::chrono::duration_cast<std::chrono::milliseconds>(now - lastHpCheck).count() > hpCheckIntervalMs) {

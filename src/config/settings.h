@@ -13,3 +13,5 @@ constexpr int manaCheckIntervalMs = 1050;
 constexpr int hpCheckIntervalMs   = 700;
 constexpr int buffInterval1Sec    = 31;
 constexpr int buffInterval2Sec    = 60;
+
+bool paused = false;
