@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\TibiaBot.dir/objects.a
+C:\mingw64\bin\ar.exe qc CMakeFiles\TibiaBot.dir/objects.a @CMakeFiles\TibiaBot.dir\objects1.rsp
+C:\mingw64\bin\c++.exe -Wl,--whole-archive CMakeFiles\TibiaBot.dir/objects.a -Wl,--no-whole-archive -o TibiaBot.exe -Wl,--out-implib,libTibiaBot.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\TibiaBot.dir\linkLibs.rsp

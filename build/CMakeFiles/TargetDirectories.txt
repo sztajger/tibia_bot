@@ -1,0 +1,3 @@
+C:/Users/sztaj/OneDrive/Pulpit/Programowanie/tibia_bot/build/CMakeFiles/TibiaBot.dir
+C:/Users/sztaj/OneDrive/Pulpit/Programowanie/tibia_bot/build/CMakeFiles/edit_cache.dir
+C:/Users/sztaj/OneDrive/Pulpit/Programowanie/tibia_bot/build/CMakeFiles/rebuild_cache.dir
