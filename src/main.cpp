@@ -5,6 +5,10 @@
 #include "memory_reader.h"
 #include <chrono>
 #include <iostream>
+#include <Windows.h>
+
+//g++ main.cpp process_utils.cpp memory_reader.cpp input_simulator.cpp window_utils.cpp -o main.exe
+//.\main.exe
 
 int main() {
     HWND hwnd = FindTibiaWindow();
@@ -28,12 +32,14 @@ int main() {
     auto lastManaCheck = std::chrono::steady_clock::now();
     auto lastBuff1 = std::chrono::steady_clock::now();
     auto lastBuff2 = std::chrono::steady_clock::now();
+    auto lastBuff3 = std::chrono::steady_clock::now();
 
     while (true) {
         if (GetAsyncKeyState('P') & 0x8000) 
 		{
             paused = !paused;
             std::cout << (paused ? "[Pasue]" : "[UnPause]") << std::endl;
+            std::cout << "P pressed!" << std::endl;
             Sleep(500); // Unikaj spamowania
         }
 
@@ -66,7 +72,11 @@ int main() {
         }
         if (std::chrono::duration_cast<std::chrono::seconds>(now - lastBuff2).count() > buffInterval2Sec) {
             lastBuff2 = now;
-            PressKey(KEY_BUFF_SPELL);
+            PressKey(KEY_BUFF_SPELL_1);
+        }
+        if (std::chrono::duration_cast<std::chrono::seconds>(now - lastBuff3).count() > buffInterval3Sec) {
+            lastBuff3 = now;
+            PressKey(KEY_BUFF_SPELL_2);
         }
 
         Sleep(20);
